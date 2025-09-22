@@ -1,7 +1,5 @@
 # 🤖 cf_ai_voice-chat - Cloudflare AI Voice Chat Application
 
-**Repository Name**: `cf_ai_voice-chat` (meets requirement for `cf_ai_` prefix)
-
 A friendly AI-powered voice chat application built on Cloudflare's edge platform. Chat naturally with an AI companion using voice or text - it's like talking to a tech-savvy friend!
 
 ## 🏃‍♂️ Quick Start - Try It Now!
