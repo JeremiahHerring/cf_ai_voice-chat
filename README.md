@@ -10,7 +10,7 @@ A friendly AI-powered voice chat application built on Cloudflare's edge platform
 
 ```powershell
 # 1. Clone and setup
-git clone <your-repo-url>
+git clone [<your-repo-url>](https://github.com/JeremiahHerring/cf_ai_voice-chat.git)
 cd cf_ai_voice-chat
 npm install
 
@@ -86,7 +86,7 @@ This application demonstrates all required components for the Cloudflare AI assi
 
 ### 1. Clone and Setup
 ```powershell
-git clone <your-repo-url>
+git clone [<your-repo-url>](https://github.com/JeremiahHerring/cf_ai_voice-chat.git)
 cd cloudflare-ai-voice-chat
 npm install
 ```
@@ -207,43 +207,6 @@ Update `wrangler.toml`:
 - Update account_id if needed
 - Configure custom domains if desired
 
-## 📊 Performance Features
-
-- **Edge Deployment**: Sub-100ms response times globally
-- **Durable Objects**: Consistent state across all locations  
-- **Streaming**: Real-time conversation flow
-- **Caching**: Optimized for repeated interactions
-
-## 🔒 Security Considerations
-
-- CORS headers configured for cross-origin requests
-- Input validation on all API endpoints
-- Rate limiting recommended for production
-- Audio data processed client-side before transmission
-
-## 🚀 Deployment Guide
-
-### Production Deployment
-1. **Worker Deployment**:
-   ```powershell
-   wrangler deploy --env production
-   ```
-
-2. **Pages Deployment**:
-   ```powershell
-   cd frontend
-   wrangler pages deploy . --project-name ai-voice-chat-prod
-   ```
-
-3. **Custom Domain** (Optional):
-   - Configure in Cloudflare Dashboard
-   - Update frontend API_BASE URL
-
-### Monitoring
-- Monitor usage in Cloudflare Dashboard
-- Check Durable Objects storage usage
-- Track AI model usage and costs
-
 ## 🎨 Customization
 
 ### Personality Changes
@@ -287,29 +250,4 @@ console.log('Debug info:', { message, sessionId, response });
 - **Storage**: 50 messages per session (configurable)
 - **Bandwidth**: Audio files are processed client-side
 
-## 🤝 Contributing
-
-This is a showcase project for the Cloudflare AI assignment. For production use:
-
-1. Add comprehensive error handling
-2. Implement proper rate limiting  
-3. Add user authentication
-4. Integrate professional TTS service
-5. Add conversation export/import
-
-## 📄 License
-
-MIT License - feel free to use this as a starting point for your own AI applications!
-
 ---
-
-## 🎯 Assignment Requirements ✅
-
-- ✅ **LLM**: Llama 3.3 on Workers AI with friend-like personality
-- ✅ **Workflow**: Cloudflare Workflows coordinate conversation flow  
-- ✅ **Voice Input**: Web Audio API + Whisper transcription
-- ✅ **Chat Input**: Text-based conversation interface
-- ✅ **Memory**: Durable Objects store conversation history and context
-- ✅ **State Management**: Session persistence across interactions
-
-Built with ❤️ on Cloudflare's edge platform!
