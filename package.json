@@ -1,0 +1,28 @@
+{
+  "name": "cf_ai_voice-chat",
+  "version": "1.0.0",
+  "description": "AI-powered voice chat application built on Cloudflare with Llama 3.1, Workflows, Pages, and Durable Objects",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "npm run build:worker && npm run build:pages",
+    "build:worker": "wrangler deploy --dry-run",
+    "build:pages": "cd frontend && npm run build",
+    "preview": "wrangler dev --local"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "ai",
+    "voice",
+    "chat",
+    "llama"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.0.0",
+    "wrangler": "^4.38.0"
+  }
+}

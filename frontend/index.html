@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Chat - Your Friendly AI Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="chat-header">
+            <h1>🤖 AI Voice Chat</h1>
+            <p class="subtitle">Your friendly AI companion - just like chatting with a friend!</p>
+        </header>
+
+        <div class="chat-container">
+            <div id="chatMessages" class="chat-messages">
+                <div class="message ai-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hey there! I'm your AI companion. You can either type to me or use the microphone button to have a voice conversation. What's on your mind?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <div class="voice-controls">
+                    <button id="micButton" class="mic-button" title="Hold to record, release to send">
+                        🎤
+                    </button>
+                    <div id="recordingIndicator" class="recording-indicator hidden">
+                        <span class="pulse"></span>
+                        Recording...
+                    </div>
+                </div>
+                
+                <div class="text-input-container">
+                    <input type="text" id="messageInput" placeholder="Type your message here..." maxlength="500">
+                    <button id="sendButton" class="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="statusMessage" class="status-message hidden"></div>
+        
+        <div class="settings">
+            <details>
+                <summary>Settings</summary>
+                <div class="settings-content">
+                    <label>
+                        Your name (optional):
+                        <input type="text" id="userNameInput" placeholder="What should I call you?">
+                    </label>
+                    <label>
+                        <input type="checkbox" id="voiceOutputEnabled" checked>
+                        Enable voice responses (when available)
+                    </label>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

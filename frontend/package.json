@@ -1,0 +1,12 @@
+{
+  "name": "cloudflare-ai-voice-chat-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for AI voice chat application",
+  "scripts": {
+    "build": "echo 'Frontend build complete'",
+    "dev": "python -m http.server 8000",
+    "preview": "python -m http.server 8080"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

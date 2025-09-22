@@ -1,0 +1,6 @@
+name = "cf-ai-voice-chat"
+main = "src/index-simple.js"
+compatibility_date = "2024-10-01"
+
+[ai]
+binding = "AI"
