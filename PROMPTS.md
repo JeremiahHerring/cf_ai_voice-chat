@@ -2,23 +2,6 @@
 
 This document contains all the AI prompts and interactions used to develop the cf_ai_voice-chat application.
 
-## Initial Project Prompt
-
-**User Request:**
-```
-Optional Assignment: See instructions below for Cloudflare AI app assignment. SUBMIT GitHub repo URL for the AI project here. (Please do not submit irrelevant repositories.)
-Optional Assignment Instructions: We plan to fast track review of candidates who complete an assignment to build a type of AI-powered application on Cloudflare. An AI-powered application should include the following components:
-LLM (recommend using Llama 3.3 on Workers AI), or an external LLM of your choice
-Workflow / coordination (recommend using Workflows, Workers or Durable Objects)
-User input via chat or voice (recommend using Pages or Realtime)
-Memory or state
-Find additional documentation here.
-
-I am trying to make an ai chat application that listens to voice and responds in casual conversation, like you're talking to a friend. How do I make this following the requirements above
-```
-
-**AI Response:** Created complete project structure with Worker, Durable Objects, Workflows, and Pages frontend.
-
 ## System Prompt for AI Personality
 
 **Prompt used in the application:**
@@ -76,23 +59,6 @@ Remember: You're not just answering questions - you're having a genuine conversa
 
 **AI Solution:** Created simplified worker version without Workflows/Durable Objects for local development, with better error handling and fallback responses.
 
-## AI Model Selection Prompts
-
-### Initial Model Choice
-**Original:** `@cf/meta/llama-3.3-70b-instruct` (as requested in assignment)
-
-### Updated Model Choice  
-**Current:** `@cf/meta/llama-3.1-70b-instruct` (more widely available for local development)
-
-**Parameters used:**
-```javascript
-{
-  messages: [system_prompt, user_message],
-  max_tokens: 256,
-  temperature: 0.7
-}
-```
-
 ## Fallback Response Prompts
 
 **When AI model fails, these responses maintain the friendly personality:**
@@ -111,38 +77,5 @@ const fallbackResponses = [
 **For speech recognition error handling:**
 - "Could not understand audio. Please try again."
 - "Audio transcription not available in local development"
-
-## Development Process Prompts
-
-### Project Structure Creation
-1. **Worker setup:** Main entry point with API routes
-2. **Durable Objects:** For conversation memory and state
-3. **Workflows:** For coordinating conversation flow
-4. **Pages frontend:** HTML/CSS/JS chat interface
-5. **Voice integration:** Web Audio API + Whisper transcription
-
-### Testing and Debugging
-1. **Console logging** for debugging network requests
-2. **Error boundaries** for graceful failure handling  
-3. **Simplified versions** for local development vs production
-
-## Assignment Compliance Prompts
-
-### Meeting Requirements Checklist
-- ✅ **LLM**: Llama 3.1 on Workers AI with friend-like personality
-- ✅ **Workflow**: Cloudflare Workflows coordinate conversation flow  
-- ✅ **Voice Input**: Web Audio API + Whisper transcription
-- ✅ **Chat Input**: Text-based conversation interface
-- ✅ **Memory**: Durable Objects store conversation history and context
-- ✅ **State Management**: Session persistence across interactions
-
-## Notes on AI-Assisted Development
-
-This entire project was built with AI assistance, demonstrating:
-- **Rapid prototyping** of full-stack applications
-- **Best practices** for Cloudflare platform integration
-- **Progressive enhancement** from simple to complex features
-- **Error handling** and debugging strategies
-- **User experience** optimization for voice interfaces
 
 The AI helped navigate platform-specific challenges like Wrangler configuration, CORS setup, and local development limitations while maintaining the core vision of a friendly, conversational AI companion.
